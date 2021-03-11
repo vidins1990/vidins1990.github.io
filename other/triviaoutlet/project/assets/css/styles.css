@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'BlueStone';
+    src: url('../font/BlueStone.ttf');
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: url('../imgs/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	font-family: "BlueStone";
+}
+
+#wrapper{
+	min-height: 800px;
+	min-width: 1200px;
+	background: url('../imgs/background-without-title.png');
+	background-repeat: no-repeat;
+	/*background-size: cover;*/
+	background-size: 100% 100%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+}
+
+h1{
+	font-size: 33px;
+	color: white;
+	text-align: center;
+}
+
+h2{
+	font-size: 28px;
+	line-height: 25px;
+	margin-top: 50px;
+	color: white;
+	text-align: center;	
+}
+
+.roomcode {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: #1c2a42;
+    padding: 0.04em 0.2em;
+    display: inline;
+    border: 0px solid transparent;
+    width: 100%;
+    font-family: 'BlueStone';
+}
+
+.labelname{
+	color: white;
+	width: 100%;
+	display: block;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.form-group{
+	margin-top: 30px;
+}
+
+.form-content{
+	padding: 20px 150px 50px 100px;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+
+.btn:hover, .btn:focus, .btn:visited{
+	text-decoration: none;
+}
+
+.btn{
+	background: url('../imgs/button-background.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	background-size: 100% 100%;
+    font-size: 20px;
+    padding: 15px 50px;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.button-wrapper{
+	margin-top: 30px;
+}
+
+.hide{
+	display: none;
+}
+
+p.error{
+	color: white;
+	font-size: 18px;
+	margin: 10px;
+}
+
+#questions-table_length, #questions-table_filter{
+	display: none;
+}
+
+table td{
+	font-size: 10px;
+	font-family: Arial;
+	cursor: pointer;
+}
+
+.dt-body-center input{
+	pointer-events: none;
+}
+
+#htmlcode{
+	width: 100%;
+    min-height: 300px;
+    overflow: scroll;
+}
+
+.table-wrapper{
+	position: relative;
+}
+
+.numberOfSelectedQs{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

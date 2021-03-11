@@ -1,0 +1,27 @@
+We are a Trivia company that supplies trivia questions and answers to the public. We are looking for some HTML code to be written to create trivia quizzes from either a xls or cvs file. We currently store all our data on Caspio.com but we are not paying for the API level. The only way I can think to accomplish this project is to have your code read the xls or csv file located on our website to get the data. i have created a sample xls file for you to use to create the code. https://triviaoutlet.com/files/1035986/triviaoutletquizdata.xls. The file name will always be named TRIVIAOUTLETQUIZDATA.xls.
+
+Here is what we will need from the code:
+
+1. Screen for user to select filters for Q_TYPE and CAT. Q_TYPE is the type of question (Multiple Choice and TRUE or FALSE are the only 2 that need to be visible). CAT=Category. Once user has selected Q-TYPE and CAT and presses a SUBMIT button all questions based on the CAT type will be displayed with a button on the left of each question to select if this is one of the questions they would like in the quiz. Also need somewhere on the screen the number of questions that have been selected so far. Need a SUBMIT button somewhere for user to complete question selection screen.
+
+The next section is the output look of the quiz. Need to give the user the ability to edit the look including fonts, font size, font color, background color. For example the question font, the box around the question, maybe ask if they want a box around the question. Please ask questions about this section.
+
+We need to have the user input QUIZ TITLE somewhere. Maybe right after the display/look screen.
+
+The next section is for the user to select the output type. I would like .html code they can copy and paste. If you have a better output option please feel free to communicate that with me. i want to make sure it remains easy for the user.
+
+The final look should be: question on top with border or no border based on user setup. large enough space between question and answer boxes. Answer boxes are bordered 2x2 not all four stacked. if question is a multiple choice 4 boxes 2x2 would appear if question is a True/False question only 2 boxes would appear side by side.
+
+The last section is the output code. html, swf are only 2 options i can think of.
+
+The fields in the quiz file are as follows:
+Q-TYPE = Question type (Multiple Choice, Single Answer, True or False etc..)
+CAT=Category (MOVIES: Actors Name, etc...)
+QUESTION = Questions
+A1 = Answer 1
+A2 = Answer 2
+A3 = Answer 3
+A4 = Answer 4
+The correct answer in A1, A2, A3 or A4 always has a + after it.
+
+There is plenty of room for your creativity. Ask a lot of questions please. This code will be on our website for our use to create quizzes but also for our members to create quizzes for their sites

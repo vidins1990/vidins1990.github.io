@@ -1,0 +1,269 @@
+<!DOCTYPE html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Welcome to Trivia Outlet</title><style>.half{width:50%;float: left}.quiz{margin-bottom:10px;}.answer-txt:after{content:" ";clear:both;float:none;display: block}.correct.answer{color:red}</style><body><div id="wrapper"><h1>Trivia Outlet</h1>
+	<div id="quiz-wrapper">
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script>
+var quizzes = [
+  {
+    "ID": "13550",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? TEDDY",
+    "A1": "ALIEN: RESURRECTION",
+    "A2": "RED PLANET",
+    "A3": "FORBIDDEN PLANET",
+    "A4": "A.I.: ARTIFICIAL INTELLIGENCE+",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13553",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? ILIA PROBE",
+    "A1": "BICENTENNIAL MAN",
+    "A2": "SILENT RUNNING",
+    "A3": "STAR TREK: THE MOTION PICTURE+",
+    "A4": "RED PLANET",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13555",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? SID 6.7",
+    "A1": "JUDGE DREDD",
+    "A2": "ALIEN: RESURRECTION",
+    "A3": "MOON",
+    "A4": "VIRTUOSITY+",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13557",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? LISA",
+    "A1": "STAR TREK: THE MOTION PICTURE",
+    "A2": "WEIRD SCIENCE+",
+    "A3": "I, ROBOT",
+    "A4": "BLADE RUNNER",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13560",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? ABC WARRIOR",
+    "A1": "A.I.: ARTIFICIAL INTELLIGENCE",
+    "A2": "TOTAL RECALL",
+    "A3": "STAR WARS",
+    "A4": "JUDGE DREDD+",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13562",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? OPTIMUS PRIME",
+    "A1": "TRANSFORMERS+",
+    "A2": "FORBIDDEN PLANET",
+    "A3": "THE TERMINATOR",
+    "A4": "TOTAL RECALL",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13564",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? ROBBY THE ROBOT",
+    "A1": "THE BLACK HOLE",
+    "A2": "FORBIDDEN PLANET+",
+    "A3": "A.I.: ARTIFICIAL INTELLIGENCE",
+    "A4": "DARK STAR",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13568",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? DAVID",
+    "A1": "ALIENS",
+    "A2": "A.I.: ARTIFICIAL INTELLIGENCE+",
+    "A3": "I, ROBOT",
+    "A4": "BLADE RUNNER",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13570",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? (LANCE) BISHOP",
+    "A1": "ALIENS+",
+    "A2": "TRANSFORMERS",
+    "A3": "TOTAL RECALL",
+    "A4": "SHORT CIRCUIT",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13572",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? ULYSSES",
+    "A1": "MAKING MR. RIGHT+",
+    "A2": "VIRTUOSITY",
+    "A3": "RED PLANET",
+    "A4": "ALIEN",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "13574",
+    "R_DATE": "",
+    "C_NUM": "",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "TRIVIAPLAZA.COM",
+    "SOURCE_TYPE": "INTERNET",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? JOHNNY 5",
+    "A1": "THIS IS A ROBOT, COMPUTER OR ANDROID FROM WHICH MOVIE? JOHNNY 5",
+    "A2": "SILENT RUNNING",
+    "A3": "SHORT CIRCUIT+",
+    "A4": "THE DAY THE EARTH STOOD STILL",
+    "IMAGE_FILE": ""
+  },
+  {
+    "ID": "12160",
+    "R_DATE": "",
+    "C_NUM": "J11",
+    "Q_NUM": "",
+    "DIFFICULTY": "",
+    "Q_TYPE": "MULTIPLE CHOICE",
+    "SOURCE": "WHO WANTS TO BE A MILLIONAIRE",
+    "SOURCE_TYPE": "BOARD GAME",
+    "S_CAT": "GAMES: VIDEO GAMES",
+    "CAT": "GAMES: VIDEO GAMES",
+    "QUESTION": "WHICH MUSICIAN HAD THE NICKNAME \"SATCHEL MOUTH\"?",
+    "A1": "LOUIS ARMSTRONG",
+    "A2": "CHARLIE PARKER",
+    "A3": "ACKER BILK",
+    "A4": "DIZZY GILLESPIE",
+    "IMAGE_FILE": ""
+  }
+];
+
+quizzes.forEach(function(q){
+	let html = '<div class="quiz"><p class="question-txt">Q.'+q['QUESTION']+'</p>';
+	html +='<div class="answer-txt">';
+	if(q['A1']){
+		if(q['A1'].indexOf('+')!=-1){
+			let answertxt = q['A1'].substring(0, q['A1'].length-1);
+			html+='<div class="correct half answer">A1. '+answertxt + '</div>';
+		}else{
+			html+='<div class="half answer">A1. '+q['A1'] + '</div>';
+		}	
+	}	
+
+	if(q['A2']){
+		if(q['A2'].indexOf('+')!=-1){
+			let answertxt = q['A2'].substring(0, q['A2'].length-1);
+			html+='<div class="correct half answer">A2. '+answertxt + '</div>';
+		}else{
+			html+='<div class="half answer">A2. '+q['A2'] + '</div>';
+		}	
+	}	
+
+	if(q['A3']){
+		if(q['A3'].indexOf('+')!=-1){
+			let answertxt = q['A3'].substring(0, q['A3'].length-1);
+			html+='<div class="correct half answer">A3. '+answertxt + '</div>';
+		}else{
+			html+='<div class="half answer">A3. '+q['A3'] + '</div>';
+		}	
+	}	
+
+	if(q['A4']){
+		if(q['A4'].indexOf('+')!=-1){
+			let answertxt = q['A4'].substring(0, q['A4'].length-1);
+			html+='<div class="correct half answer">A4. '+answertxt + '</div>';
+		}else{
+			html+='<div class="half answer">A4. '+q['A4'] + '</div>';
+		}	
+	}	
+	html+='</div>';
+	html+='</div>';
+	$("#quiz-wrapper").append(html);
+})
+</script>
+</body></html>
